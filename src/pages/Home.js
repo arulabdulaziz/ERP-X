@@ -8,6 +8,7 @@ const Home = () => {
       <nav>
         <Link to="/user">User</Link> | <Link to="/client">Client</Link> | <Link to="/project">Project</Link>
       </nav>
+      <h1 className="text-primary text-4xl font-bold">Hello world! I am using React</h1>;
     </div>
   );
 };
