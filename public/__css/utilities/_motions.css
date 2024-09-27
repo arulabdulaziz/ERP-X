@@ -1,0 +1,78 @@
+@layer utilities {
+
+    [motion]
+    {
+        transition-property: all;
+        transition-timing-function: linear;
+    }
+
+    [motion].stop-motion
+    {
+        opacity: 1 !important;
+        transform: translate(0,0) !important;
+    }
+
+    .app-motion--normal [motion] 
+    {
+        transition-duration: 300ms;
+    }
+    
+    .app-motion--fast [motion] 
+    {
+        transition-duration: 100ms;
+    }
+    
+    .app-motion--slow [motion] 
+    {
+        transition-duration: 600ms;
+    }
+    
+    .app-motion--none .mt-bottom,
+    .app-motion--none .mt-left,
+    .app-motion--none .mt-right,
+    .app-motion--none .mt-top
+    {
+        opacity: 1 !important;
+    }
+
+    .app-motion--fast .mt-bottom,
+    .app-motion--fast .mt-left,
+    .app-motion--fast .mt-right,
+    .app-motion--fast .mt-top,
+    .app-motion--normal .mt-bottom,
+    .app-motion--normal .mt-left,
+    .app-motion--normal .mt-right,
+    .app-motion--normal .mt-top,
+    .app-motion--slow .mt-bottom,
+    .app-motion--slow .mt-left,
+    .app-motion--slow .mt-right,
+    .app-motion--slow .mt-top
+    {
+        opacity: 0;
+    }
+
+    .mt-bottom
+    {
+        transform: translateY(20px);
+    }
+    .mt-top
+    {
+        transform: translateY(-20px);
+    }
+    .mt-left
+    {
+        transform: translateX(-20px);
+    }
+    .mt-right
+    {
+        transform: translateX(20px);
+    }
+    .mt-onbottom,
+    .mt-onleft,
+    .mt-onright,
+    .mt-ontop
+    {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}

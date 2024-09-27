@@ -26,7 +26,10 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "taildev": "npx tailwindcss --postcss -i ./public/__css/main.css -o ./src/css/style.css --watch",
+    "tailpro": "npx tailwindcss -i ./public/__css/main.css -o ./src/css/style.min.css --minify",
+    "dev": "concurrently --kill-others \"npm start\" \"npm run taildev\""
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +48,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "postcss-import": "^16.1.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss-localized": "^1.0.0"
   }
 }

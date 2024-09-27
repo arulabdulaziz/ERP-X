@@ -1,0 +1,13 @@
+
+@import "tailwindcss/base";
+@import "./base/core.css";
+
+@import "tailwindcss/components";
+@import "./components/buttons.css";
+
+@import "tailwindcss/utilities";
+@import "./utilities/_motions.css";
+
+@import './fontawesome.css';
+@import './light.css';
+@import './regular.css';
